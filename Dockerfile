@@ -6,8 +6,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 RUN pip3 install requests pyyaml
 
-ARG ALPINE_VERSION=3.7
-FROM alpine:${ALPINE_VERSION}
+FROM alpine:3.7
 
 MAINTAINER SignalFx Support <support+collectd@signalfx.com>
 
