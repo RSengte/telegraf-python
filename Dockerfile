@@ -5,11 +5,3 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install requests pyyaml
-
-FROM debian:jessie
-
-COPY . /go/src/github.com/bobrik/collectd-docker
-
-RUN /go/src/github.com/bobrik/collectd-docker/docker/build.sh
-
-ENTRYPOINT ["/run.sh"]
